@@ -1,0 +1,29 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:54751",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Pawnee.Dashboard": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "PAWNEE_AZSTORAGE": "DefaultEndpointsProtocol=https;AccountName=proxima1;AccountKey=ZbjLvYRexokNPaIdYvPzMymjYQ+z8kaZiw2VIJS8LffdcOqIC8J9BuhqQRxOr18LJ80jrXZnUXx0TaUdW+X4VQ==;EndpointSuffix=core.windows.net",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "PAWNEE_REDIS": "proxima-test.redis.cache.windows.net:6380,password=yh2ns+MTo9PDKxeVHtD2t62K4I3h+UfPG3Kd473UedU=,ssl=True,abortConnect=False"
+      },
+      "applicationUrl": "http://localhost:5000"
+    }
+  }
+}

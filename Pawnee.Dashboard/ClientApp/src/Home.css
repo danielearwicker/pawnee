@@ -1,0 +1,151 @@
+#root, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.pages {
+    flex: 0 0 auto;
+    overflow: hidden;
+}
+
+.logo {
+    font-size: 1.2em;
+    padding: 0.5em;
+    font-style: italic;
+    color: #555;
+}
+
+.page-link {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 2px;
+    border-radius: 4px;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+}
+
+.page-link.active {
+    background: #444;
+    color: white;
+}
+
+.page-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.pipeline {
+    overflow: auto;
+    width: 100%;
+}
+
+.layer {
+    margin: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.stage {
+    margin: 0 1em;
+    border: 2px solid #ddd;    
+    border-radius: 0.5em;
+    justify-self: center;
+    box-shadow: 5px 5px 5px #eee;
+    min-width: 12em;
+}
+
+.stage .title {
+    padding: 0.5em;
+    border-radius: 0.4em 0.4em 0 0;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    background: #eee;
+    font-style: italic;
+    justify-content: center;
+}
+
+.stage .title .running, .stage .title .waiting {
+    padding-left: 0.5em;
+}
+
+.stage .title .waiting {
+    color: #BBB;
+}
+
+.activities {
+    padding: 0.5em 0;
+    margin-left: 2em;
+}
+
+.activity-key {    
+    font-weight: bold;
+    color: silver;
+}
+
+.activity-message {
+    padding-right: 0.5em;
+}
+
+.instance-key {
+    padding-right: 1em;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.grid-table {
+    overflow: auto;
+}
+
+.grid td, .grid th {
+    padding: 0.1em 1em;
+}
+
+.grid th {
+    text-align: left;
+}
+
+.paging {
+    padding: 0.5em;
+    text-align: right;
+}
+
+.paging .paging-button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 2px;
+    border-radius: 4px;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+}
+
+.paging .paging-button.disabled {
+    opacity: 0.5;
+}
+
+.workers {
+    overflow: auto;
+}
+
+.workers td, .workers th {
+    padding: 0.1em 1em;
+}
+
+.workers th {
+    text-align: left;
+}
