@@ -1,13 +1,13 @@
-﻿using Newtonsoft.Json;
-using Pawnee.Core.Queue;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Pawnee.Core
+﻿namespace Pawnee.Core.Pipelines
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Newtonsoft.Json;
+    using Queue;
+
     public interface IPawneeConfig
     {
         PawneeStageBuilder<T> AddStage<T>(string name);

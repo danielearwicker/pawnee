@@ -1,12 +1,12 @@
-using MessagePack;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace BlobMap
+namespace Pawnee.Core.BlobMaps
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using MessagePack;
+
     public class BlobMapLeaf<T> : BlobMapNode<T>
     {
         private LinkedListNode<BlobMapLeaf<T>> _loaded;

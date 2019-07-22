@@ -10,7 +10,7 @@ namespace Pawnee.Dashboard
 {
     using System;
     using AzureBindings;
-    using BlobMap;
+    using Core.BlobMaps;
 
     public class Startup
     {

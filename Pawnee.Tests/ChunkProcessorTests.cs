@@ -1,11 +1,14 @@
 using Moq;
-using Platform;
 using Pawnee.Core;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Pawnee.Tests
 {
+    using Core.Batched;
+    using Core.BlobMaps;
+    using Core.Pipelines;
+
     public class ChunkProcessorTests
     {
         public class TestRecord

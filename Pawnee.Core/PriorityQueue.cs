@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace Platform
+﻿namespace Pawnee.Core
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class PriorityQueue<TKey, TValue>
     {
         private readonly SortedDictionary<TKey, List<TValue>> _heap = new SortedDictionary<TKey, List<TValue>>();

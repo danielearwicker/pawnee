@@ -1,13 +1,13 @@
-﻿using BlobMap;
-using MessagePack;
-using Platform;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Pawnee.Core
+﻿namespace Pawnee.Core.Pipelines
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Batched;
+    using BlobMaps;
+    using MessagePack;
+
     public interface IChangeListStorage
     {
         Task<IReadOnlyCollection<string>> Load(string stage, int id);

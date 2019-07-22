@@ -1,12 +1,11 @@
-﻿using MessagePack;
-using Platform;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace BlobMap
+﻿namespace Pawnee.Core.BlobMaps
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Batched;
+
     public class Cursor<T> : IBatchedEnumerator<(string key, T value)>
     {
         public class BranchCursor

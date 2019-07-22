@@ -1,10 +1,10 @@
-﻿using System;
-using BlobMap;
-using MessagePack;
-using Microsoft.Extensions.Logging;
-
-namespace Pawnee.Core
+﻿namespace Pawnee.Core.Pipelines
 {
+    using System;
+    using BlobMaps;
+    using MessagePack;
+    using Microsoft.Extensions.Logging;
+
     [MessagePackObject]
     public class Command
     {

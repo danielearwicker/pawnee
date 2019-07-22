@@ -1,4 +1,4 @@
-﻿namespace FileSystemBindings
+﻿namespace Pawnee.FileSystemBindings
 {
     public interface IFilePathProvider
     {

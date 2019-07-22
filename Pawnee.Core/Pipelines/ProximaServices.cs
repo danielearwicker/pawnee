@@ -1,9 +1,9 @@
-﻿using BlobMap;
-using Pawnee.Core.Queue;
-using System;
-
-namespace Pawnee.Core
+﻿namespace Pawnee.Core.Pipelines
 {
+    using System;
+    using BlobMaps;
+    using Queue;
+
     public interface IPawneeScaleParameters
     {
         int TrackingReadBatchSize { get; }

@@ -9,6 +9,8 @@ using Pawnee.Core.Queue;
 
 namespace Pawnee.Dashboard.Controllers
 {
+    using Core.BlobMaps;
+    using Core.Pipelines;
     using MessagePack;
 
     [Route("api/[controller]")]

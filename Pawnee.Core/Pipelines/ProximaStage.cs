@@ -1,13 +1,13 @@
-﻿using Platform;
-using Pawnee.Core.Queue;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Pawnee.Core
+﻿namespace Pawnee.Core.Pipelines
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Batched;
+    using BlobMaps;
+    using Queue;
+
     public interface IPawneeStage<TOut>
     {
         string Name { get; }

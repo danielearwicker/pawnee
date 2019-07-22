@@ -1,14 +1,14 @@
-using FluentAssertions;
-using Moq;
-using Platform;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Xunit;
-
-namespace BlobMap.Tests
+namespace Pawnee.Tests
 {
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Threading.Tasks;
+    using Core.Batched;
+    using Core.BlobMaps;
+    using FluentAssertions;
+    using Moq;
+    using Xunit;
+
     public class BlobMapTests
     {
         class MemoryStorage : IBlobStorage

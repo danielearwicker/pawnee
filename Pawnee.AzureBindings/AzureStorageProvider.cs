@@ -1,7 +1,7 @@
-﻿using Microsoft.WindowsAzure.Storage;
-
-namespace AzureBindings
+﻿namespace Pawnee.AzureBindings
 {
+    using Microsoft.WindowsAzure.Storage;
+
     public interface IAzureStorageProvider
     {
         CloudStorageAccount Account { get; }

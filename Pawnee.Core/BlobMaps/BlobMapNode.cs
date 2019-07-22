@@ -1,9 +1,9 @@
-using MessagePack;
-using System.IO;
-using System.Threading.Tasks;
-
-namespace BlobMap
+namespace Pawnee.Core.BlobMaps
 {
+    using System.IO;
+    using System.Threading.Tasks;
+    using MessagePack;
+
     public interface IReadOnlyBlobMapKey<out T>
     {
         bool HasValue { get; }

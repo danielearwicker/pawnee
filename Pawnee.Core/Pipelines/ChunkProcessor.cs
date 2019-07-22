@@ -1,8 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace Pawnee.Core
+﻿namespace Pawnee.Core.Pipelines
 {
+    using System;
+    using System.Threading.Tasks;
+    using BlobMaps;
+
     public class ChunkProcessorOptions
     {
         public string Stage { get; set; }

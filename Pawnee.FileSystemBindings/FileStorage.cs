@@ -1,9 +1,9 @@
-﻿using System.IO;
-using System.Threading.Tasks;
-using BlobMap;
-
-namespace FileSystemBindings
+﻿namespace Pawnee.FileSystemBindings
 {
+    using System.IO;
+    using System.Threading.Tasks;
+    using Core.BlobMaps;
+
     public class FileStorage : IBlobStorage
     {
         private readonly string _containerPath;

@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using BlobMap;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Platform;
 using Pawnee.Core.Queue;
 using StackExchange.Redis;
 
 namespace Pawnee.Core
 {
+    using BlobMaps;
+
     public enum ProgressStatus
     {
         Busy,

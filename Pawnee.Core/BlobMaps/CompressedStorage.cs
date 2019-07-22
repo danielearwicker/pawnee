@@ -1,9 +1,9 @@
-using System.IO;
-using System.IO.Compression;
-using System.Threading.Tasks;
-
-namespace BlobMap
+namespace Pawnee.Core.BlobMaps
 {
+    using System.IO;
+    using System.IO.Compression;
+    using System.Threading.Tasks;
+
     public class CompressedStorage : IBlobStorage
     {
         private readonly IBlobStorage _impl;

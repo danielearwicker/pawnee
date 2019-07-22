@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Platform
+﻿namespace Pawnee.Core.Batched
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+
     public class BatchedTransform<TIn, TOut> : IBatchedEnumerator<TOut>
     {
         private readonly IBatchedEnumerator<TIn> _source;

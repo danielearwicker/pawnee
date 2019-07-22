@@ -1,11 +1,10 @@
-﻿using BlobMap;
-using MessagePack;
-using Platform;
-using System;
-using System.Threading.Tasks;
-
-namespace Pawnee.Core
+﻿namespace Pawnee.Core.BlobMaps
 {
+    using System;
+    using System.Threading.Tasks;
+    using Batched;
+    using MessagePack;
+
     [MessagePackObject]
     public class MultiMapKey
     {

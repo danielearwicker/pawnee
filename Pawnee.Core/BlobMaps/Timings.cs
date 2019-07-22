@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-
-namespace BlobMap
+﻿namespace Pawnee.Core.BlobMaps
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Diagnostics;
+
     public interface ITimings
     {
         IDisposable Track(string category);

@@ -1,8 +1,8 @@
-﻿using System;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace Platform
+﻿namespace Pawnee.Core
 {
+    using System;
+    using Microsoft.Extensions.DependencyInjection;
+
     public static class FactoryExtensions
     {
         public static IServiceCollection AddFactory<TInterface, TImplementation>(this IServiceCollection services)

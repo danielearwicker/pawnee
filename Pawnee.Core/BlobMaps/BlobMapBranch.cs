@@ -1,14 +1,14 @@
-using MessagePack;
-using MessagePack.Formatters;
-using MessagePack.Resolvers;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace BlobMap
+namespace Pawnee.Core.BlobMaps
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using MessagePack;
+    using MessagePack.Formatters;
+    using MessagePack.Resolvers;
+
     public interface IBlobMapBranch<T> : IBlobMapNode<T>
     {
         Task Add(string startKey, IBlobMapNode<T> child);

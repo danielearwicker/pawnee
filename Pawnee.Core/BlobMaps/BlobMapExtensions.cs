@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
-namespace BlobMap
+﻿namespace Pawnee.Core.BlobMaps
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+
     public static class BlobMapExtensions
     {
         public static async Task Set<TValue>(this IBlobMap<TValue> tree, string key, TValue value)

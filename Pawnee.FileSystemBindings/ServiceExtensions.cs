@@ -1,9 +1,9 @@
-﻿using BlobMap;
-using Microsoft.Extensions.DependencyInjection;
-using Platform;
-
-namespace FileSystemBindings
+﻿namespace Pawnee.FileSystemBindings
 {
+    using Core;
+    using Core.BlobMaps;
+    using Microsoft.Extensions.DependencyInjection;
+
     public static class ServiceExtensions
     {
         public static IServiceCollection AddFileSystemBindings(

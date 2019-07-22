@@ -1,7 +1,7 @@
-using System.Collections.Generic;
-
-namespace BlobMap
+namespace Pawnee.Core.BlobMaps
 {
+    using System.Collections.Generic;
+
     public static class CollectionExtensions
     {
         public static TValue GetValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dict, TKey key)

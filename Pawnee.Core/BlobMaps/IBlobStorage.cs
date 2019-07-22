@@ -1,10 +1,9 @@
-﻿using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
-
-namespace BlobMap
+﻿namespace Pawnee.Core.BlobMaps
 {
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Threading.Tasks;
+    using Microsoft.Extensions.Logging;
 
     public interface IBlobStorage
     {

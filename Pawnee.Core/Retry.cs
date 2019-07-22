@@ -1,9 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
-using System.Threading.Tasks;
-
-namespace Platform
+﻿namespace Pawnee.Core
 {
+    using System;
+    using System.Threading.Tasks;
+    using Microsoft.Extensions.Logging;
 
 
     public static class Retry

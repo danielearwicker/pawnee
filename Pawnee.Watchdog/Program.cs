@@ -6,8 +6,6 @@ using Pawnee.Core.Queue;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Extensions.Logging;
-using BlobMap;
-using AzureBindings;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Authentication;
 using Azure = Microsoft.Azure.Management.Fluent.Azure;
 using Microsoft.Azure.Management.ResourceManager.Fluent;
@@ -18,6 +16,10 @@ using Microsoft.Rest;
 
 namespace Pawnee.Watchdog
 {
+    using AzureBindings;
+    using Core.BlobMaps;
+    using Core.Pipelines;
+
     class Program
     {
         static void Main(string[] args)

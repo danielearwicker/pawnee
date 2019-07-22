@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
-namespace Platform
+﻿namespace Pawnee.Core.Batched
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+
     public interface IBatchedEnumerator<out T> : IDisposable
     {
         IEnumerable<T> CurrentBatch { get; }

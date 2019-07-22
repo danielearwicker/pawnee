@@ -1,4 +1,4 @@
-﻿namespace BlobMap
+﻿namespace Pawnee.Core.BlobMaps
 {
     public interface IBlobMapFactory
     {

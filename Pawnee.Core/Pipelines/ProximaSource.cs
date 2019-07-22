@@ -1,11 +1,11 @@
-﻿using BlobMap;
-using Pawnee.Core.Queue;
-using System;
-using System.IO;
-using System.Threading.Tasks;
-
-namespace Pawnee.Core
+﻿namespace Pawnee.Core.Pipelines
 {
+    using System;
+    using System.IO;
+    using System.Threading.Tasks;
+    using BlobMaps;
+    using Queue;
+
     public interface IPawneeSource : IPawneeStage
     {
         Task PrepareInputs(string prefix, int chunkCount);

@@ -1,5 +1,4 @@
-﻿using Platform;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 
 namespace Pawnee.Core.Queue

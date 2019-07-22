@@ -1,13 +1,13 @@
-﻿using BlobMap;
-using Platform;
-using Pawnee.Core.Queue;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Pawnee.Core
+﻿namespace Pawnee.Core.Pipelines
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Batched;
+    using BlobMaps;
+    using Queue;
+
     public class ProjectionGroup<TIn, TOut>
     {
         private readonly Func<string, TOut, Task> _output;

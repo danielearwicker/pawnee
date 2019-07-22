@@ -3,6 +3,8 @@ using Pawnee.Core.Queue;
 
 namespace Pawnee.Core
 {
+    using Pipelines;
+
     public static class ServiceExtensions
     {
         public static IServiceCollection AddPawnee(this IServiceCollection services, string redis)
