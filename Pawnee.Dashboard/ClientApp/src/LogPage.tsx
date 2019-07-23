@@ -51,17 +51,19 @@ export function LogPage({ log, page }: LogPageProps) {
             <div className="grid-table">
                 <table>
                     <thead>
-                        <th>Stage</th>
-                        <th>Aspect</th>
-                        <th>Instance</th>
-                        <th>Count</th>
-                        <th>Per Second</th>
-                        <th>Message</th>
-                        <th>Status</th>
-                        <th>TimeStamp</th>
-                        <th>Sequence Number</th>
-                        <th>Virtual Bytes</th>
-                        <th>Working Set</th>
+                        <tr>
+                            <th>Stage</th>
+                            <th>Aspect</th>
+                            <th>Instance</th>
+                            <th>Count</th>
+                            <th>Per Second</th>
+                            <th>Message</th>
+                            <th>Status</th>
+                            <th>TimeStamp</th>
+                            <th>Sequence Number</th>
+                            <th>Virtual Bytes</th>
+                            <th>Working Set</th>
+                        </tr>>
                     </thead>
                     <tbody>
                     {

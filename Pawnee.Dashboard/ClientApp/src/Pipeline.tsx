@@ -11,8 +11,8 @@ export function Pipeline({ layers }: PipelineProps) {
     return (
         <div className="pipeline">
         {
-            layers.map(layer => (
-                <div className="layer">
+            layers.map((layer, i) => (
+                <div className="layer" key={i}>
                     { layer.map(stage => <StageNode key={stage.name} stage={stage}/>) }
                 </div>
             ))

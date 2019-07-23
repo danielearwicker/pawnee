@@ -37,8 +37,10 @@ export function Workers({ queue }: WorkersProps) {
         <div className="workers">
             <table>
                 <thead>
-                    <th>Id</th>
-                    <th>Status</th>                    
+                    <tr>
+                        <th>Id</th>
+                        <th>Status</th>
+                    </tr>
                 </thead>
                 <tbody>
                 {

@@ -10,6 +10,9 @@ export interface StageNodeProps {
 
 export function StageNode({ stage }: StageNodeProps) {
 
+    const sortedActivities = Object.keys(stage.activities);
+    sortedActivities.sort();
+
     return (
         <div className="stage">
             <div className="title">
@@ -27,7 +30,7 @@ export function StageNode({ stage }: StageNodeProps) {
             </div>
             <ul className="activities">
             {
-                Object.keys(stage.activities).map(activityKey => (
+                sortedActivities.map(activityKey => (
                     <ActivitySection key={activityKey} activityKey={activityKey} activity={stage.activities[activityKey]} />
                 ))                    
             }

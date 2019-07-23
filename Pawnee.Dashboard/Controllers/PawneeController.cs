@@ -42,7 +42,7 @@ namespace Pawnee.Dashboard.Controllers
             return new ActionResult<Tabulation>(await Tabulate(map, skip, take, filter));
         }
 
-        private int TabulateItem(byte[] data, int offset, List<string> row)
+        private int TabulateItem(byte[] data, int offset, JArray row)
         {
             var type = MessagePackBinary.GetMessagePackType(data, offset);
             var result = string.Empty;
@@ -87,14 +87,17 @@ namespace Pawnee.Dashboard.Controllers
             return offset + readSize;
         }
 
-        private int TabulateArray(byte[] data, int offset, List<string> row)
+        private int TabulateArray(byte[] data, int offset, JArray row)
         {
             var arrayLength = MessagePackBinary.ReadArrayHeader(data, offset, out var readSize);
             offset += readSize;
 
+            var subRow = new JArray();
+            row.Add(subRow);
+
             for (var n = 0; n < arrayLength; n++)
             {
-                offset = TabulateItem(data, offset, row);
+                offset = TabulateItem(data, offset, subRow);
             }
 
             return offset;
@@ -102,7 +105,7 @@ namespace Pawnee.Dashboard.Controllers
 
         private async Task<Tabulation> Tabulate(IBlobMultiMap<byte[]> data, int skip, int take, string filter)
         {
-            var rows = new List<List<string>>();
+            var rows = new List<JArray>();
 
             using (var iter = data.IterateKeyRange(filter, null))
             {
@@ -118,9 +121,20 @@ namespace Pawnee.Dashboard.Controllers
                         {
                             take--;
 
-                            var row = new List<string> {key.Value, key.Id};
+                            var row = new JArray();
 
                             TabulateItem(record, 0, row);
+
+                            if (row.Count == 1)
+                            {
+                                if (row[0] is JArray singleNestedRow)
+                                {
+                                    row = singleNestedRow;
+                                }
+                            }
+
+                            row.Insert(0, key.Value);
+                            row.Insert(1, key.Id);
 
                             rows.Add(row);
                         }
@@ -156,6 +170,6 @@ namespace Pawnee.Dashboard.Controllers
     {
         public IEnumerable<string> Columns { get; set; }
 
-        public IEnumerable<IEnumerable<string>> Rows { get; set; }
+        public IEnumerable<JArray> Rows { get; set; }
     }
 }

@@ -84,8 +84,10 @@
 }
 
 .activities {
-    padding: 0.5em 0;
+    padding: 0.5em 1em 0.5em 0;
     margin-left: 2em;
+    max-height: 15em;
+    overflow: auto;
 }
 
 .activity-key {    
@@ -98,7 +100,9 @@
 }
 
 .instance-key {
-    padding-right: 1em;
+    padding-right: 0.5em;
+    font-weight: bold;
+    color: silver;
 }
 
 .grid {
@@ -111,8 +115,13 @@
     overflow: auto;
 }
 
+.grid-table table { 
+    border-collapse: collapse;
+}
+
 .grid td, .grid th {
-    padding: 0.1em 1em;
+    padding: 0.2em 0.23em;
+    border: 1px solid #eee;
 }
 
 .grid th {

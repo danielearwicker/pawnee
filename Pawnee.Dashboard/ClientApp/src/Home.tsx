@@ -86,8 +86,14 @@ export class Home extends Component<{}, HomeState> implements SignalHandler {
         const stage = stages[update.stage];
         if (!stage) return;
 
-        const aspect = stage.activities[update.aspect] ||
-            (stage.activities[update.aspect] = {
+        if (update.message && update.message.indexOf("Operations that change non-concurrent") !== -1) {
+            console.log(update);
+        }
+
+        const aspectName = update.aspect || "(general)";
+
+        const aspect = stage.activities[aspectName] ||
+            (stage.activities[aspectName] = {
                 instances: {},
                 errors: [],
                 finished: 0,
@@ -102,12 +108,12 @@ export class Home extends Component<{}, HomeState> implements SignalHandler {
             aspect.errors.push(update);
         }
 
-        if (update.status !== 0) {
+        if (update.status === 1) {
             aspect.finished++;
         }
 
         var oldUpdate = aspect.instances[update.instance || 0];
-        if (!oldUpdate || update.sequenceNumber > oldUpdate.sequenceNumber) {
+        if (!oldUpdate || update.timeStamp > oldUpdate.timeStamp) {
             aspect.instances[update.instance || 0] = update;
         }
     }
